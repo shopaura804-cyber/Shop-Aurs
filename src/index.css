@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-aura-bg: #F8FAFC;
+  --color-aura-ink: #0F172A;
+  --color-aura-muted: #64748B;
+  --color-aura-border: #E2E8F0;
+  --color-aura-accent: #4F46E5;
+  --color-aura-accent-hover: #4338CA;
+}
+
+@layer base {
+  body {
+    @apply bg-aura-bg text-aura-ink antialiased font-sans transition-colors duration-300;
+  }
+}
+
+.nav-link {
+  @apply text-sm font-medium text-aura-muted hover:text-aura-ink transition-colors;
+}
+
+.nav-link-active {
+  @apply text-aura-accent;
+}
+
+.card-polish {
+  @apply bg-white p-4 rounded-xl shadow-sm border border-aura-border transition-all hover:shadow-md;
+}
